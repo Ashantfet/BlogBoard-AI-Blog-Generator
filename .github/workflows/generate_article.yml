@@ -2,7 +2,7 @@ name: Generate Daily Article
 
 on:
   schedule:
-    - cron: '30 3 * * 1-6'   # 9:00 AM IST (UTC+5:30), Mon–Sat
+    - cron: '0 8 * * *'   # 13:30 IST (08:00 UTC) for test run
 
   workflow_dispatch:
     inputs:
