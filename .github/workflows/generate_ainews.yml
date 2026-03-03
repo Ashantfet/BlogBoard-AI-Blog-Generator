@@ -68,8 +68,8 @@ jobs:
       - name: Commit and push generated AI News article
         if: ${{ github.event.inputs.dry_run != 'true' }}
         run: |
-          git config --global user.name  "KalyanM45"
-          git config --global user.email "mhemakalyan@gmail.com"
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
           git add frontend/blogs/ainews/
           git add backend/schedule.json
