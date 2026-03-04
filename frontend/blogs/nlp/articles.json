@@ -1,0 +1,18 @@
+[
+  {
+    "id": "blogs/nlp/nlp-basics.md",
+    "category": "nlp",
+    "title": "NLP Basics",
+    "description": "Learn NLP fundamentals, boost language skills",
+    "date": "2026-03-05",
+    "tags": [
+      "natural-language-processing",
+      "machine-learning",
+      "text-analysis",
+      "speech-recognition",
+      "language-modeling"
+    ],
+    "readTime": "6 min",
+    "file": "blogs/nlp/nlp-basics.md"
+  }
+]
