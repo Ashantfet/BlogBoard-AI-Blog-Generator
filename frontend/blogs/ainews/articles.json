@@ -1,5 +1,19 @@
 [
   {
+    "id": "blogs/ainews/the-week-in-ai-3.md",
+    "category": "ainews",
+    "title": "The Week in AI #3",
+    "description": "The past week saw significant developments in artificial intelligence, including the FDA's AI-powered vaccine platform and growing expectations for AI to transform everyday life.",
+    "date": "2026-03-15",
+    "tags": [
+      "ainews",
+      "artificial intelligence",
+      "weekly roundup"
+    ],
+    "readTime": "6 min",
+    "file": "blogs/ainews/the-week-in-ai-3.md"
+  },
+  {
     "id": "blogs/ainews/the-week-in-ai-2.md",
     "category": "ainews",
     "title": "The Week in AI #2",
