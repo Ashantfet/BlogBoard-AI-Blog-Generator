@@ -1,5 +1,21 @@
 [
   {
+    "id": "blogs/genai/probabilistic-models.md",
+    "category": "genai",
+    "title": "Probabilistic Models",
+    "description": "Learn probabilistic generative modeling for AI insights. Improve model performance",
+    "date": "2026-03-21",
+    "tags": [
+      "probabilistic-modeling",
+      "generative-ai",
+      "machine-learning",
+      "deep-learning",
+      "neural-networks"
+    ],
+    "readTime": "6 min",
+    "file": "blogs/genai/probabilistic-models.md"
+  },
+  {
     "id": "blogs/genai/generative-ai-models.md",
     "category": "genai",
     "title": "Generative AI Models",

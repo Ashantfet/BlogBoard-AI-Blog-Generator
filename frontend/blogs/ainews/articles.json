@@ -1,5 +1,19 @@
 [
   {
+    "id": "blogs/ainews/the-week-in-ai-4.md",
+    "category": "ainews",
+    "title": "The Week in AI #4",
+    "description": "This article discusses the latest developments in the AI industry, focusing on trends and investments in AI research and development.",
+    "date": "2026-03-16",
+    "tags": [
+      "ainews",
+      "artificial intelligence",
+      "weekly roundup"
+    ],
+    "readTime": "9 min",
+    "file": "blogs/ainews/the-week-in-ai-4.md"
+  },
+  {
     "id": "blogs/ainews/the-week-in-ai-3.md",
     "category": "ainews",
     "title": "The Week in AI #3",

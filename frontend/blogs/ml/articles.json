@@ -1,21 +1,5 @@
 [
   {
-    "id": "blogs/ml/machine-learning-life-cycle.md",
-    "category": "ml",
-    "title": "Machine Learning Life Cycle",
-    "description": "Learn machine learning project workflow and best practices to improve model efficiency",
-    "date": "2026-03-16",
-    "tags": [
-      "machine-learning",
-      "deep-learning",
-      "natural-language-processing",
-      "model-deployment",
-      "data-science"
-    ],
-    "readTime": "7 min",
-    "file": "blogs/ml/machine-learning-life-cycle.md"
-  },
-  {
     "id": "blogs/ml/machine-learning-lifecycle.md",
     "category": "ml",
     "title": "Machine Learning Lifecycle",
@@ -30,6 +14,22 @@
     ],
     "readTime": "6 min",
     "file": "blogs/ml/machine-learning-lifecycle.md"
+  },
+  {
+    "id": "blogs/ml/machine-learning-life-cycle.md",
+    "category": "ml",
+    "title": "Machine Learning Life Cycle",
+    "description": "Learn key stages and best practices for successful ML projects.",
+    "date": "2026-03-16",
+    "tags": [
+      "machine-learning",
+      "data-science",
+      "model-development",
+      "project-management",
+      "ai-engineering"
+    ],
+    "readTime": "7 min",
+    "file": "blogs/ml/machine-learning-life-cycle.md"
   },
   {
     "id": "blogs/ml/machine-learning-challenges.md",
