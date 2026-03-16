@@ -75,9 +75,17 @@ const CATEGORY_META = {
     color: '#fb923c',
     bgColor: 'rgba(251, 146, 60, 0.12)',
   },
+  custom: {
+    label: 'Custom Blogs',
+    shortLabel: 'Custom',
+    description: 'Blogs generated dynamically using custom topics.',
+    icon: '✍️',
+    color: '#22c55e',
+    bgColor: 'rgba(34, 197, 94, 0.12)',
+  },
 };
 
-const ALL_CATEGORIES = ['ml', 'dl', 'nlp', 'cv', 'genai', 'ainews', 'statistics'];
+const ALL_CATEGORIES = ['ml', 'dl', 'nlp', 'cv', 'genai', 'ainews', 'statistics','custom'];
 
 /* ── Cache ─────────────────────────────────────────────── */
 const _cache = {};

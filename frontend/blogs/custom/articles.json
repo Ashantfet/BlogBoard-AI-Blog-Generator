@@ -14,5 +14,37 @@
     ],
     "readTime": "7 min",
     "file": "blogs/custom/virat-kohli-bio.md"
+  },
+  {
+    "id": "blogs/custom/ihsana-ml-models.md",
+    "category": "custom",
+    "title": "Ihsana ML Models",
+    "description": "Learn ihsana with expert AI/ML insights",
+    "date": "2026-03-16",
+    "tags": [
+      "machine-learning",
+      "artificial-intelligence",
+      "deep-learning",
+      "natural-language-processing",
+      "model-deployment"
+    ],
+    "readTime": "6 min",
+    "file": "blogs/custom/ihsana-ml-models.md"
+  },
+  {
+    "id": "blogs/custom/ipl-2025-final.md",
+    "category": "custom",
+    "title": "IPL 2025 Final",
+    "description": "Get highlights and analysis of the IPL 2025 Final match",
+    "date": "2026-03-16",
+    "tags": [
+      "indian-premier-league",
+      "ipl-match-analysis",
+      "cricket-t20",
+      "sports-blogging",
+      "ipl-news"
+    ],
+    "readTime": "7 min",
+    "file": "blogs/custom/ipl-2025-final.md"
   }
 ]
