@@ -1,4 +1,4 @@
-from typing import TypedDict
+from typing import TypedDict,Optional
 
 
 class BlogState(TypedDict, total=False):
@@ -17,3 +17,4 @@ class BlogState(TypedDict, total=False):
     read_time: str
     md_path: str
     news_data: str
+    custom_topic: Optional[str]

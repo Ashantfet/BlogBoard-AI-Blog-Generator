@@ -88,15 +88,37 @@ def consolidate_schedule(state: BlogState) -> BlogState:
 
 def get_domain_topic(state: BlogState) -> BlogState:
 
-    date, schedule = state["date"], state["schedule"]
+    date = state["date"]
+    schedule = state["schedule"]
+    custom_topic = state.get("custom_topic")
+    # print(custom_topic)
 
+    # Use custom topic if provided
+    if custom_topic:
+        topic = custom_topic
+        domain = "custom"
+        subtopics = ""
+
+        print(f"  Custom Topic : {topic}")
+
+        return {
+            **state,
+            "domain": domain,
+            "topic": topic,
+            "subtopics": subtopics,
+            "skipped": False,
+        }
+
+    # Otherwise use schedule
     if date not in schedule:
         print(f"  [INFO]  No article scheduled for {date}. (Skipping generation.)")
         return {**state, "skipped": True}
 
     entry = schedule[date]
-    domain, topic = entry["domain"], entry["topic"]
+    domain = entry["domain"]
+    topic = entry["topic"]
     subtopics = entry.get("subtopics", "")
+
     label = CATEGORY_META.get(domain, {}).get("label", domain)
 
     print(f"  Date      : {date}")
@@ -105,7 +127,13 @@ def get_domain_topic(state: BlogState) -> BlogState:
     if subtopics:
         print(f"  Subtopics : {subtopics}")
 
-    return {**state, "domain": domain, "topic": topic, "subtopics": subtopics, "skipped": False}
+    return {
+        **state,
+        "domain": domain,
+        "topic": topic,
+        "subtopics": subtopics,
+        "skipped": False,
+    }
 
 
 def llm_generate(state: BlogState) -> BlogState:

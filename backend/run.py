@@ -54,11 +54,16 @@ Examples
         "--ainews", action="store_true",
         help="Run the AI News gathering and generation graph",
     )
+    parser.add_argument(
+        "--topic", type=str, default=None,
+        help="Generate blog for a custom topic instead of scheduled topic"
+    )
     args = parser.parse_args()
 
     date_str = args.date or today_ist()
     dry_run  = args.dry_run
     run_ainews = args.ainews
+    custom_topic = args.topic
 
     # ── Banner ────────────────────────────────────────────────────────────────
     print(f"\n{'='*55}")
@@ -71,6 +76,7 @@ Examples
     initial_state = {
         "date":    date_str,
         "dry_run": dry_run,
+        "custom_topic": custom_topic,
     }
 
     config = {"configurable": {"thread_id": "blogboard-1"}}
