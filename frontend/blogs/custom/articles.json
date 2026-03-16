@@ -62,5 +62,53 @@
     ],
     "readTime": "4 min",
     "file": "blogs/custom/t20wc-final.md"
+  },
+  {
+    "id": "blogs/custom/kalidas-yeturu-ml-expert.md",
+    "category": "custom",
+    "title": "Kalidas Yeturu ML Expert",
+    "description": "Learn from expert Kalidas Yeturu, boost ML skills",
+    "date": "2026-03-16",
+    "tags": [
+      "machine-learning",
+      "artificial-intelligence",
+      "deep-learning",
+      "natural-language-processing",
+      "data-science"
+    ],
+    "readTime": "5 min",
+    "file": "blogs/custom/kalidas-yeturu-ml-expert.md"
+  },
+  {
+    "id": "blogs/custom/random-forest-tree.md",
+    "category": "custom",
+    "title": "Random Forest Tree",
+    "description": "Learn to implement random forest tree models for better predictions",
+    "date": "2026-03-16",
+    "tags": [
+      "machine-learning",
+      "random-forest",
+      "decision-trees",
+      "supervised-learning",
+      "ensemble-methods"
+    ],
+    "readTime": "7 min",
+    "file": "blogs/custom/random-forest-tree.md"
+  },
+  {
+    "id": "blogs/custom/deep-learning-basics.md",
+    "category": "custom",
+    "title": "Deep Learning Basics",
+    "description": "Learn deep learning fundamentals, boost AI skills",
+    "date": "2026-03-16",
+    "tags": [
+      "deep-learning",
+      "neural-networks",
+      "machine-learning",
+      "artificial-intelligence",
+      "natural-language-processing"
+    ],
+    "readTime": "5 min",
+    "file": "blogs/custom/deep-learning-basics.md"
   }
 ]

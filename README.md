@@ -3,117 +3,327 @@
 <p align="center"> <img src="https://img.shields.io/github/license/KalyanM45/BlogBoard-AI-Blog-Generator?style=ROUND" alt="License" /> <img src="https://img.shields.io/github/stars/KalyanM45/BlogBoard-AI-Blog-Generator?style=ROUND" alt="Stars" /> <img src="https://img.shields.io/github/forks/KalyanM45/BlogBoard-AI-Blog-Generator?style=ROUND" alt="Forks" /> <img src="https://img.shields.io/github/issues/KalyanM45/BlogBoard-AI-Blog-Generator?style=ROUND"alt="Issues" />
 </p>
 
-## About The Project
+# BlogBoard — AI Blog Generator
 
-BlogBoard is an end-to-end, fully automated blogging platform. It autonomously schedules, writes, formats, and publishes deep-dive technical articles on Machine Learning and Artificial Intelligence directly to a fast, static frontend website.
+BlogBoard is an **AI-powered blogging platform** that automatically generates high-quality articles using Large Language Models and organizes them into a clean, static website.
 
-Powered by **LangGraph** for stateful workflow execution and **Groq** for blazing-fast LLM inference, it ensures that high-quality, zero-fluff, production-grade articles are generated and deployed automatically via **GitHub Actions**.
+Originally designed as a scheduled AI article generator using **LangGraph workflows**, this project has been extended to support **dynamic blog generation from any topic via a web interface**.
 
-## Library Requirements
+The system combines:
 
- - Python 3.12+
- - langgraph>=0.2.20
- - groq>=0.11.0
- - python-dotenv>=1.0.1
- - uv (for dependency management)
+* Automated AI content generation
+* Static blog website rendering
+* A backend API for real-time article creation
 
-## Getting Started
+This makes BlogBoard a lightweight **AI blogging platform** that can generate and publish articles instantly.
 
-This will help you understand how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+---
 
-## Installation Steps
+# Overview
 
-### Installation from GitHub
+BlogBoard uses a modular pipeline where a backend AI system generates blog content and the frontend displays it as a modern blog website.
 
-Follow these steps to install and set up the project directly from the GitHub repository:
+### Core Workflow
 
-1. **Clone the Repository**
-   - Open your terminal or command prompt.
-   - Navigate to the directory where you want to install the project.
-   - Run the following command to clone the GitHub repository:
-     ```bash
-     git clone https://github.com/KalyanM45/BlogBoard-AI-Blog-Generator.git
-     ```
+```
+User enters topic (UI or CLI)
+        ↓
+FastAPI Backend API
+        ↓
+LangGraph Workflow Pipeline
+        ↓
+LLM Content Generation (Groq API)
+        ↓
+Markdown Article Generation
+        ↓
+Update articles.json
+        ↓
+Frontend loads and displays the blog
+```
 
-2. **Create a Virtual Environment** (Recommended)
-   - It's a good practice to create a virtual environment to manage project dependencies. Run the following command:
-     ```bash
-     uv venv
-     ```
+Articles are stored as **Markdown files** and automatically indexed in JSON files for the frontend to render.
 
-3. **Activate the Virtual Environment**
-   - Activate the virtual environment based on your operating system:
-       ```bash
-       # On Linux/Mac:
-       source .venv/bin/activate
-       # On Windows:
-       .venv\Scripts\activate
-       ```
+---
 
-4. **Install Dependencies**
-   - Navigate to the project directory:
-     ```bash
-     cd BlogBoard-AI-Blog-Generator
-     ```
-   - Run the following command to install project dependencies:
-     ```bash
-     uv pip install -r backend/requirements.txt
-     ```
+# Key Features
 
-5. **Run the Project**
-   - Start the backend pipeline by running the appropriate command:
-     ```bash
-     python backend/run.py
-     ```
+## AI Blog Generation
 
-6. **Access the Project**
-   - Serve the frontend locally using Python's built-in HTTP server:
-     ```bash
-     python -m http.server 8000 --directory frontend
-     ```
-   - Open a web browser and navigate to `http://localhost:8000`.
+Automatically generate complete blog posts including:
 
+* SEO-friendly titles
+* Descriptions
+* Tags
+* Markdown formatted content
+* Estimated read time
 
-## API Key Setup
+## Dynamic Topic Generation
 
-To use this project, you need an API key from Groq to power the Large Language Model inference. Follow these steps to obtain and set up your API key:
+Users can generate blogs for **any topic** directly from the UI or CLI.
 
-1. **Get API Key:**
-   - Visit the Groq Console at [console.groq.com](https://console.groq.com/).
-   - Follow the instructions to create an account and obtain your API key.
+Examples:
 
-2. **Set Up API Key:**
-   - Create a file named `.env` in the project root.
-   - Add your API key to the `.env` file:
-     ```dotenv
-     GROQ_API_KEY=your_api_key_here
-     ```
+```
+Virat Kohli Biography
+Artificial Intelligence in Healthcare
+India vs Pakistan Cricket Rivalry
+History of SpaceX
+```
 
-   **Note:** Keep your API key confidential. Do not share it publicly or expose it in your code.<br>
+## LangGraph AI Pipeline
 
-## Contributing
+The project uses **LangGraph** to orchestrate the content generation workflow:
 
-Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+1. Schedule consolidation
+2. Topic selection
+3. Metadata generation
+4. Blog generation
+5. Markdown export
+6. Website update
 
-• **Report bugs**: If you encounter any bugs, please let us know. Open up an issue and let us know the problem.
+## Static Blog Website
 
-• **Contribute code**: If you are a developer and want to contribute, follow the instructions below to get started!
+The frontend renders articles dynamically using:
 
-1. Fork the Project
-2. Create your Feature Branch
-3. Commit your Changes
-4. Push to the Branch
-5. Open a Pull Request
+* HTML
+* CSS
+* JavaScript
+* Markdown parsing
 
-• **Suggestions**: If you don't want to code but have some awesome ideas, open up an issue explaining some updates or improvements you would like to see!
+Categories include:
 
-#### Don't forget to give the project a star! Thanks again!
+* Machine Learning
+* Deep Learning
+* NLP
+* Computer Vision
+* Generative AI
+* AI News
+* Statistics
 
-## License
+## Custom Topic Category (Added Feature)
 
-This project is licensed under the [MIT License](https://opensource.org/licenses/MIT) - see the [LICENSE](LICENSE) file for details.<br>
+A new **Custom Blogs** category was introduced to support blogs generated from arbitrary topics.
 
-## Acknowledgements
+Generated blogs are stored in:
 
-We'd like to extend our gratitude to all individuals and organizations who have played a role in the development and success of this project. Your support, whether through contributions, inspiration, or encouragement, has been invaluable. Thank you for being a part of our journey.
+```
+frontend/blogs/custom/
+```
+
+## Web-Based Blog Generator (Added Feature)
+
+A web interface allows users to generate blogs directly from the website without running CLI commands.
+
+Users simply enter a topic and click **Generate Blog**.
+
+## Unified Backend Server (Added Feature)
+
+A FastAPI backend now serves:
+
+* The frontend website
+* The blog generation API
+
+This allows the entire platform to run from **a single server command**.
+
+---
+
+# Project Structure
+
+```
+BlogBoard-AI-Blog-Generator
+│
+├── backend
+│   ├── api.py                # FastAPI backend server
+│   ├── run.py                # Blog generation pipeline entry
+│   ├── graph
+│   │   ├── graph.py
+│   │   ├── nodes.py
+│   │   └── state.py
+│   ├── prompts
+│   │   ├── blog_generation.txt
+│   │   └── metadata_generation.txt
+│   └── data
+│
+├── frontend
+│   ├── index.html
+│   ├── category.html
+│   ├── post.html
+│   ├── css
+│   ├── js
+│   │   ├── blogs-data.js
+│   │   ├── home.js
+│   │   └── post.js
+│   └── blogs
+│       ├── ml
+│       ├── dl
+│       ├── nlp
+│       ├── cv
+│       ├── genai
+│       ├── ainews
+│       ├── statistics
+│       └── custom
+│
+└── README.md
+```
+
+---
+
+# Installation
+
+Clone the repository:
+
+```
+git clone https://github.com/ashantfet/BlogBoard-AI-Blog-Generator.git
+cd BlogBoard-AI-Blog-Generator
+```
+
+Create a virtual environment:
+
+```
+python -m venv venv
+source venv/bin/activate
+```
+
+Install dependencies:
+
+```
+pip install -r requirements.txt
+```
+
+---
+
+# Environment Variables
+
+Create a `.env` file:
+
+```
+GROQ_API_KEY=your_api_key_here
+```
+
+The system uses the Groq API for LLM inference.
+
+---
+
+# Running the Platform
+
+Start the unified backend server:
+
+```
+uvicorn backend.api:app --reload --port 9000
+```
+
+Open the website:
+
+```
+http://localhost:8000
+```
+
+The server will:
+
+* Serve the frontend website
+* Handle blog generation requests
+* Automatically update the blog database
+
+---
+
+# Generating Blogs
+
+## From Website
+
+1. Open the homepage
+2. Enter a topic
+3. Click **Generate Blog**
+
+The article will automatically appear under the **Custom Blogs** category.
+
+## From CLI
+
+You can also generate blogs from the command line:
+
+```
+python backend/run.py --topic "Virat Kohli Biography"
+```
+
+---
+
+# Example Generated Output
+
+```
+frontend/blogs/custom/virat-kohli-bio.md
+frontend/blogs/custom/articles.json
+```
+
+The frontend automatically loads these files and displays the blog.
+
+---
+
+# Improvements Added
+
+The following features were implemented to extend the original project:
+
+### Custom Topic Support
+
+Added CLI argument:
+
+```
+--topic
+```
+
+This allows generating blogs on any subject.
+
+### Custom Blog Category
+
+Created a new category for dynamically generated articles.
+
+```
+frontend/blogs/custom
+```
+
+### FastAPI Backend
+
+Introduced a backend API to handle blog generation requests.
+
+### Website Blog Generator
+
+Added UI elements enabling users to generate blogs directly from the website.
+
+### Unified Server
+
+The platform now runs as a single web server instead of separate backend and frontend processes.
+
+---
+
+# Future Enhancements
+
+Possible improvements include:
+
+* AI generated blog thumbnails
+* Automatic SEO analysis
+* RSS feed generation
+* Auto-publishing scheduler
+* User accounts and authentication
+* Deployment to cloud hosting platforms
+
+---
+
+# License
+
+This project is released under the MIT License.
+
+---
+
+# Author
+
+Ashant Kumar
+
+GitHub
+https://github.com/ashantfet
+
+LinkedIn
+https://www.linkedin.com/in/ashant-kumar-21a0941a5/
+
+---
+
+# Acknowledgment
+
+Thanks to the original BlogBoard project contributors for the base architecture and AI pipeline implementation.
