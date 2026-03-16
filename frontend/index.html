@@ -92,6 +92,28 @@
     </div>
   </section>
 
+  <section class="generator-section">
+    <div class="section-header">
+      <span class="section-tag">AI Generator</span>
+      <h2 class="section-title">Generate Any Blog</h2>
+    </div>
+
+    <div class="generator-box">
+      <input
+        id="topicInput"
+        type="text"
+        placeholder="Enter topic (e.g. Virat Kohli Biography)"
+        class="generator-input"
+      />
+
+      <button onclick="generateBlog()" class="btn-primary">
+        Generate Blog
+      </button>
+
+      <p id="generatorStatus"></p>
+    </div>
+  </section>
+
   <!-- Categories Section -->
   <section class="categories-section" id="categories">
     <div class="section-header">
@@ -140,7 +162,7 @@
         <div class="cat-arrow">→</div>
         <div class="cat-glow"></div>
       </a>
-      
+
       <a href="category.html#cat=custom" class="cat-card" data-cat="custom">
       <div class="cat-icon-wrap">
         <svg viewBox="0 0 48 48" fill="none" class="cat-icon">

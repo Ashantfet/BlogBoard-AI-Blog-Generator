@@ -136,3 +136,30 @@ function initParticles() {
     }
     draw();
 }
+async function generateBlog() {
+  const topic = document.getElementById("topicInput").value;
+  const status = document.getElementById("generatorStatus");
+
+  if (!topic) {
+    status.innerText = "Please enter a topic.";
+    return;
+  }
+
+  status.innerText = "Generating blog...";
+
+  try {
+    const res = await fetch(
+      `http://localhost:9000/generate?topic=${encodeURIComponent(topic)}`
+    );
+
+    const data = await res.json();
+
+    if (data.status === "success") {
+      status.innerText = "Blog generated! Refresh page to see it.";
+    } else {
+      status.innerText = "Error generating blog.";
+    }
+  } catch (err) {
+    status.innerText = "Backend server not running.";
+  }
+}

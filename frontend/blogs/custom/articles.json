@@ -30,5 +30,37 @@
     ],
     "readTime": "7 min",
     "file": "blogs/custom/ipl-2025-final.md"
+  },
+  {
+    "id": "blogs/custom/virat-kohli-cricket.md",
+    "category": "custom",
+    "title": "Virat Kohli Cricket",
+    "description": "Learn about Virat Kohli's cricket career and achievements",
+    "date": "2026-03-16",
+    "tags": [
+      "cricket-analysis",
+      "sports-data",
+      "player-profiles",
+      "indian-cricket",
+      "sports-ai"
+    ],
+    "readTime": "7 min",
+    "file": "blogs/custom/virat-kohli-cricket.md"
+  },
+  {
+    "id": "blogs/custom/t20wc-final.md",
+    "category": "custom",
+    "title": "T20WC Final",
+    "description": "Get updates on ICC T20WC final, analysis and more",
+    "date": "2026-03-16",
+    "tags": [
+      "icc-t20-world-cup",
+      "cricket-analysis",
+      "t20wc-final",
+      "icc-cricket",
+      "t20-world-cup"
+    ],
+    "readTime": "4 min",
+    "file": "blogs/custom/t20wc-final.md"
   }
 ]

@@ -471,3 +471,19 @@
         font-size: 2rem;
     }
 }
+.generator-section {
+  margin: 80px auto;
+  text-align: center;
+}
+
+.generator-box {
+  margin-top: 20px;
+}
+
+.generator-input {
+  padding: 12px;
+  width: 320px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-right: 10px;
+}
